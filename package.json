@@ -12,6 +12,7 @@
     "nuxt": "3.0.0-rc.8"
   },
   "dependencies": {
+    "@mdi/font": "^7.0.96",
     "@pinia/nuxt": "^0.4.0",
     "firebase": "^9.9.2",
     "gsap": "^3.10.4",
