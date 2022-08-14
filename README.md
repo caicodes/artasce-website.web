@@ -166,4 +166,7 @@ Setting up the darkmode, the nuxt module makes this simple... let's keep it simp
 
 > still need to look into using css vars better with vuetify...
 
+Colormode working, no sync with nuxt/color-mode at this time... For now, done... sync later, I'm not in the mood for another battle with color modes and theming, besides, I've pretty much nailed a few different setups, now it's about the vuetify elements, the starter site, the presentation/navigation/buttery effects for show!
+
+
 
