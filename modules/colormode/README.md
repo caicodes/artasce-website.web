@@ -1,8 +1,8 @@
-# colormode module
+# colormode
 
-started from this repo... the `starter-nuxt-deluxe` official...
+> PROBABLY ONE OF THE MOST TIME CONSUMING SETUPS IN VARIOUS FRAMEWORKS
 
-## note, exporting as is
+I have a drop in vuetify toggle, it's not syncing yet with anything like localstorage, etc.. I'll do this with nuxt, but maybe not with the vite/vue just yet.. If I do, pinia may be involved, for now, nuxt, easy and light/dark only for this starter!
 
-gonna export this module as is, jump in on a new nuxt project, add the colormode module and tweak several of the others, the suite is growing, this site will add firebase and a nuxt-content module... the modules idea is greatly benefitting dev time and minimal frustration... the suite will grow and improve and getting a versioning plan and master repo will be helpful...
+Done... sync later, I'm not in the mood for another battle with color modes and theming, besides, I've pretty much nailed a few different setups, now it's about the vuetify elements, the starter site, the presentation/navigation/buttery effects for show!
 

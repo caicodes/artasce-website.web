@@ -156,4 +156,14 @@ import HelloPinia from '../components/VHelloPinia.vue'
 
 ```
 
+### Content Module added
+
+Added content and module configured, has a full site setup of pages... haven't found the source project from a little while ago that had the best implementation...
+
+### Colormode added... 
+
+Setting up the darkmode, the nuxt module makes this simple... let's keep it simple for this starter and focus on the dual light/dark setup, knowing it's easy to integrate more, this is a first run with vuetify colormode and nuxt using nuxt/color-mode... 
+
+> still need to look into using css vars better with vuetify...
+
 
