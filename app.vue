@@ -14,8 +14,8 @@
       <!-- Provides the application the proper gutter -->
       <v-container fluid>
 
-        <!-- If using vue-router -->
-        <router-view></router-view>
+        <!-- nuxt page main -->
+        <nuxt-page></nuxt-page>
       </v-container>
     </v-main>
 

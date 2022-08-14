@@ -1,3 +1,9 @@
+<script setup>
+import Viewer from '~~/components/content/Viewer.vue';
+</script>
 <template>
-    <v-icon>mdi-home</v-icon>
+    <div>
+        <v-icon>mdi-home</v-icon>
+        <Viewer />
+    </div>
 </template>
