@@ -1,42 +1,92 @@
-# Nuxt 3 Minimal Starter
+# nuxt vuetify firebase
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
+```
+yarn add -D @nuxtjs/color-mode @nuxt/content
+yarn add  @pinia/nuxt gsap firebase vuetify@3.0.0-beta.7 sass
 ```
 
-## Development Server
+Ok... after that, the nuxt config...
 
-Start the development server on http://localhost:3000
+```javascript
 
-```bash
-npm run dev
+import { defineNuxtConfig } from "nuxt";
+
+// https://v3.nuxtjs.org/api/configuration/nuxt.config
+export default defineNuxtConfig({
+  modules: ["@nuxtjs/color-mode", "@nuxt/content", "@pinia/nuxt"],
+});
+
 ```
 
-## Production
+Now add a plugins directory, and next a file vuetify.js with the following
 
-Build the application for production:
+```javascript
+// plugins/vuetify.js
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
-```bash
-npm run build
+export default defineNuxtPlugin(nuxtApp => {
+  const vuetify = createVuetify({
+    components,
+    directives,
+  })
+
+  nuxtApp.vueApp.use(vuetify)
+})
 ```
 
-Locally preview production build:
+Now configure nuxt to build it and pull in the css...
 
-```bash
-npm run preview
+```javascript
+import { defineNuxtConfig } from "nuxt";
+
+// https://v3.nuxtjs.org/api/configuration/nuxt.config
+export default defineNuxtConfig({
+  modules: ["@nuxtjs/color-mode", "@nuxt/content", "@pinia/nuxt"],
+  css: ["vuetify/lib/styles/main.sass"],
+  build: {
+    transpile: ["vuetify"],
+  },
+  vite: {
+    define: {
+      "process.env.DEBUG": false,
+    },
+  },
+});
+
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+Now, test to see it working and drop in the default application layout at app.vue
+
+
+```javascript
+<template>
+  <v-app>
+    <v-navigation-drawer app>
+      <!-- -->
+    </v-navigation-drawer>
+
+    <v-app-bar app>
+      <!-- -->
+    </v-app-bar>
+
+    <!-- Sizes your content based upon application components -->
+    <v-main>
+
+      <!-- Provides the application the proper gutter -->
+      <v-container fluid>
+
+        <!-- If using vue-router -->
+        <router-view></router-view>
+      </v-container>
+    </v-main>
+
+    <v-footer app>
+      <!-- -->
+    </v-footer>
+  </v-app>
+
+</template>
+
+```
