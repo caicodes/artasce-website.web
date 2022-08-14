@@ -170,3 +170,9 @@ Colormode working, no sync with nuxt/color-mode at this time... For now, done...
 
 
 
+### Todos Testing
+
+Todos were a drop in and work perfectly... there's an app squash then flash fill the screen issue I'm wonding about...
+
+For now, the site now has menus and pages setup, todos work, light/dark is working, no persist, no deep integration... no color theming setup, sass vars done... coming along.
+
