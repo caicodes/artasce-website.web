@@ -1,18 +1,11 @@
-/**
- *
- *  Artasce Creative
- *
- *    FIREBASE PLUGIN
- *
- *
- */
 import { initializeApp } from "firebase/app"
 
-export default defineNuxtPlugin((/* nuxtApp */) => {
+export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig()
+
   const firebaseConfig = {
-    apiKey: config.NUXT_FIREBASE_API_KEY,
+    apiKey: config.apiKey,
   }
   const app = initializeApp(firebaseConfig)
-  // console.log(app)
+  console.log(app)
 })

@@ -1,10 +1,10 @@
-import { defineNuxtConfig } from "nuxt";
+import { defineNuxtConfig } from "nuxt"
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   modules: ["@nuxtjs/color-mode", "@nuxt/content", "@pinia/nuxt"],
   runtimeConfig: {
-    // apiSecret: '', // can be overridden by NUXT_API_SECRET environment variable
+    // apiKey: process.env.NUXT_FIREBASE_API_KEY,
     public: {
       apiKey: process.env.NUXT_FIREBASE_API_KEY,
     },
@@ -17,7 +17,7 @@ export default defineNuxtConfig({
       "process.env.DEBUG": false,
     },
   },
-});
+})
 
 /*
 
