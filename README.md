@@ -197,3 +197,14 @@ messaging
 stats
 
 
+## update - firebase hosting fixed...
+
+this issue has been resolved, it's client-side or pre-rendered.. first I did pre-rendered, worked great... for client side only, need to update the config with `ssr: false`
+
+```javascript
+
+defineNuxtConfig({
+  ssr: false
+})
+
+```
