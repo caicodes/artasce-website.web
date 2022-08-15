@@ -11,6 +11,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth"
+import { useFirebaseUser } from "./useState"
 
 /**
  *
@@ -55,16 +56,19 @@ export const signInUser = async (email, password) => {
  */
 export const initUser = async () => {
   const auth = getAuth()
+  const firebaseUser = useFirebaseUser()
+  firebaseUser.value = auth.currentUser
+
   onAuthStateChanged(auth, (user) => {
     if (user) {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
-      const uid = user.uid
       console.log("initUser: ", user)
     } else {
       // User is signed out
-      console.log("user is signed out")
+      console.log("auth changed", user)
     }
+    firebaseUser.value = user
   })
 }
 

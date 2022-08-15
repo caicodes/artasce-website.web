@@ -1,3 +1,11 @@
+/**
+ *
+ *  Artasce Creative
+ *
+ *    FIREBASE PLUGIN
+ *
+ *
+ */
 import { initializeApp } from "firebase/app"
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -7,5 +15,8 @@ export default defineNuxtPlugin((nuxtApp) => {
     apiKey: config.apiKey,
   }
   const app = initializeApp(firebaseConfig)
-  console.log(app)
+
+  initUser()
+
+  // console.log(app)
 })
