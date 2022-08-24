@@ -10,8 +10,7 @@ import NavBar from "./components/app/NavBar.vue"
       <!-- Provides the application the proper gutter -->
       <v-container fluid>
         <!-- nuxt page main -->
-
-        <nuxt-page></nuxt-page>
+        <NuxtPage />
       </v-container>
     </v-main>
     <v-footer app>
