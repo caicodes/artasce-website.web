@@ -1,57 +1,10 @@
-<script setup>
-definePageMeta({
-  middleware: ["auth"],
-  // or middleware: 'auth'
-})
-
-const firebaseUser = useFirebaseUser()
-const credentials = ref()
-
-const reloadPage = () => {
-  window.location.reload()
-}
-
-const signIn = async () => {
-  const email = "yo@artasce.com"
-  const password = "yoyoyo"
-  credentials.value = await signInUser(email, password)
-}
-const signOut = async () => {
-  credentials.value = await signOutUser()
-}
-</script>
 <template>
-  <div>
-    <div class="float-left bg-primar pr-4">
-      <v-btn
-        color="success"
-        size="x-large"
-        class="mr-2"
-        @click="reloadPage"
-        >reloadPage</v-btn
-      >
-      <v-btn
-        v-if="!firebaseUser"
-        color="success"
-        size="x-large"
-        class="mr-2"
-        @click="signIn"
-        >signIn</v-btn
-      >
-      <v-btn
-        v-if="firebaseUser"
-        color="success"
-        size="x-large"
-        class="mr-2"
-        @click="signOut"
-        >signOut</v-btn
-      >
+  <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg">
+    <div
+      class="d-flex flex-column fill-height justify-center align-center text-white"
+    >
+      <h1 class="text-h4 font-weight-thin mb-4">Welcome</h1>
+      <h4 class="subheading">Build your application today!</h4>
     </div>
-    <client-only>
-      <div v-if="firebaseUser">
-        <pre>{{ firebaseUser }}</pre>
-      </div>
-      <div v-else>no one logged in</div>
-    </client-only>
-  </div>
+  </v-parallax>
 </template>

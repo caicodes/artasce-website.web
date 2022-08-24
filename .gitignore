@@ -6,7 +6,6 @@ node_modules
 .output
 .env
 dist
-.DS_Store
-modules
-.DS_Store
 .firebase
+.DS_Store
+modules 
